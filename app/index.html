@@ -22,8 +22,8 @@
 </head>
 <body>
 
-<div class="jumbotron">
-    <div class="container">
+<div>
+    <div>
         <div class="col-sm-8 col-sm-offset-2">
             <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
                  ng-if="flash" ng-bind="flash.message"></div>
@@ -31,15 +31,7 @@
         </div>
     </div>
 </div>
-<div class="credits text-center">
-    <p>
-        <a href="http://jasonwatmore.com/post/2015/03/10/AngularJS-User-Registration-and-Login-Example.aspx">AngularJS
-            User Registration and Login Example</a>
-    </p>
-    <p>
-        <a href="http://jasonwatmore.com">JasonWatmore.com</a>
-    </p>
-</div>
+
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
