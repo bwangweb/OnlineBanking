@@ -1,6 +1,5 @@
 ﻿<div class="login-page">
     <div class="form">
-
         <form name="form" ng-submit="vm.login()" role="form">
             <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
                 <input type="text" name="username" id="username" placeholder="username" ng-model="vm.username" required/>
@@ -19,6 +18,5 @@
                 <p class="message">Not registered? <a href="#/register">Create an account</a></p>
             </div>
         </form>
-
     </div>
 </div>
