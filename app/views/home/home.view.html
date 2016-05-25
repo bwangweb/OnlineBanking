@@ -1,11 +1,126 @@
-﻿<h1>Hi {{vm.user.firstName}}!</h1>
-<p>You're logged in!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li ng-repeat="user in vm.allUsers">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>
-    </li>
-</ul>
-<p>&nbsp;</p>
-<p><a href="#/login" class="btn btn-primary">Logout</a></p>
+﻿
+<div class="container">
+    <h1>Hi {{vm.user.firstName}}!</h1>
+    <p>You're logged in!!</p>
+
+    <p>&nbsp;</p>
+
+    <div class="table">
+
+        <div class="custom-row header grey">
+            <div class="cell">
+                Account
+            </div>
+            <div class="cell">
+                Account Type
+            </div>
+            <div class="cell">
+                Available Balance
+            </div>
+        </div>
+
+        <div class="custom-row">
+            <div class="cell">
+                Primary Checking (...1234)
+            </div>
+            <div class="cell">
+                Checking
+            </div>
+            <div class="cell">
+                $1234.5
+            </div>
+        </div>
+        <div class="custom-row">
+            <div class="cell">
+                Investment Checking (...8987)
+            </div>
+            <div class="cell">
+                Checking
+            </div>
+            <div class="cell">
+                $234.5
+            </div>
+        </div>
+        <div class="custom-row">
+            <div class="cell">
+                Primary Saving (...4536)
+            </div>
+            <div class="cell">
+                Saving
+            </div>
+            <div class="cell">
+                $11234.5
+            </div>
+        </div>
+
+    </div>
+
+    <div class="table">
+
+        <div class="custom-row header grey">
+            <div class="cell">
+                Card Name
+            </div>
+            <div class="cell">
+                Card Type
+            </div>
+            <div class="cell">
+                Available Credit
+            </div>
+        </div>
+
+        <div class="custom-row">
+            <div class="cell">
+                Bonnie Visa (...1234)
+            </div>
+            <div class="cell">
+                Credit
+            </div>
+            <div class="cell">
+                $1234.5
+            </div>
+        </div>
+        <div class="custom-row">
+            <div class="cell">
+                Bonnie Visa Signature (...4567)
+            </div>
+            <div class="cell">
+                Credit
+            </div>
+            <div class="cell">
+                $234.5
+            </div>
+        </div>
+        <div class="custom-row">
+            <div class="cell">
+                Bonnie Debit (...5774)
+            </div>
+            <div class="cell">
+                Debit
+            </div>
+            <div class="cell">
+                $11234.5
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function() {
+        function moveFloatMenu() {
+            var menuOffset = menuYloc.top + $(this).scrollTop() + "px";
+            $('#floatMenu').animate({
+                top: menuOffset
+            }, {
+                duration: 500,
+                queue: false
+            });
+        }
+
+        menuYloc = $('#floatMenu').offset();
+
+        $(window).scroll(moveFloatMenu);
+
+        moveFloatMenu();
+    });
+</script>
