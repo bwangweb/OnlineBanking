@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="container">
+    <h1>Contact Info</h1>
+    <div>Bonnie Wang, 211 Rutgers Rd, Piscataway Township, NJ 08854</div>
+    <p></p>
+    <div class="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.8611554064355!2d-74.44477154932297!3d40.566743279246644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b85c9df99cf9%3A0xdec041b402b3080e!2s211+Rutgers+Rd%2C+Piscataway+Township%2C+NJ+08854!5e0!3m2!1sen!2sus!4v1464156893225"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
 
-</body>
-</html>
+    <h2>FeedBack</h2>
+    <div class="form">
+        <form class="con">
+            <input type="text" class="text" value="Name" onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = 'Name';}">
+            <input type="text" class="text" value="Email Address" onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = 'Email Address';}">
+            <input type="text" class="text" value="Subject" onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = 'Subject';}">
+                <textarea value="Message" onfocus="this.value = '';"
+                          onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+            <div class="clearfix"></div>
+            <div class="sub-button">
+                <input name="submit" type="submit" value="Send ">
+            </div>
+        </form>
+    </div>
+</div>
